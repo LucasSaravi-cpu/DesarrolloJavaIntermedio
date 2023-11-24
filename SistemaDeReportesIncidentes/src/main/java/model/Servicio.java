@@ -1,38 +1,30 @@
 package model;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import javax.persistence.*;
+
+@Getter
+@Setter
+@NoArgsConstructor
+@Entity     
+
+@Table(name="SERVICIO")
 
 public class Servicio {
 
-
+	 @Id
+	 @GeneratedValue(strategy = GenerationType.IDENTITY)   //generará automáticamente un valor único para la clave principal
+	 @Column(name="id")
+	 private Long id;
+	 
+	 @Column(name="nombre")
 	 private String nombre;
+	 
+	 @Column(name="descripcion")
 	 private String descripcion;
 	
 	 
-	public Servicio(String nombre ,String descripcion) {
-		super();
-		this.nombre = nombre;
-		this.descripcion = descripcion;
-		
-	}
-
-
-	public String getNombre() {
-		return nombre;
-	}
-
-
-	public String getDescripcion() {
-		return descripcion;
-	}
-
-
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
-	}
-
-
-	public void setDescripcion(String descripcion) {
-		this.descripcion = descripcion;
-	}
 
 
 	@Override

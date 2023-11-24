@@ -5,7 +5,7 @@ import java.util.Random;
 
 public class AreaComercial {
 	
-	    private static final String[] NOMBRES = {"Lucas", "Ana", "Pedro", "Mar�a", "Juan"};
+	 /*   private static final String[] NOMBRES = {"Lucas", "Ana", "Pedro", "Mar�a", "Juan"};
 	    private static final String[] RAZONSOCIAL = {"EMPRESA A", "EMPRESA B", "EMPRESA C", "EMPRESA D"};
 	    private static final String[] CUIT = {"123456789", "1011121314", "555555555", "999999999"};
 
@@ -20,7 +20,7 @@ public class AreaComercial {
 	        String cuit = CUIT[random.nextInt(CUIT.length)];
 
 	        return new Cliente(nombre, razonsocial, cuit);
-	    }
+	    }*/
 
 	 
 	 //AreaComercial areaComercial = new AreaComercial();

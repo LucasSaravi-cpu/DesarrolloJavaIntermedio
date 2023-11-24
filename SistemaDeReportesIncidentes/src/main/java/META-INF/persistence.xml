@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd"
+             version="2.2">
+
+    <persistence-unit name="TP_GRU1" transaction-type="RESOURCE_LOCAL">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
+        <!-- Clases de entidad -->
+        <class>model.Cliente</class>
+        <class>model.Tecnico</class>
+        <class>model.Servicio</class>
+        <class>model.Incidente</class>
+        <class>model.Operador</class>
+        <class>model.TipoProblema</class>
+        <class>model.Especialidad</class>
+        
+        <properties>
+            <!-- Propiedades de configuración de Hibernate -->
+            <property name="hibernate.dialect" value="org.hibernate.dialect.SQLiteDialect"/>
+            <property name="hibernate.connection.driver_class" value="com.mysql.cj.jdbc.Driver"/>
+            
+            <!-- ruta donde esta la base de datos -->
+            <property name="hibernate.connection.url" value="C:\Users\Principal\Desktop\Documentos\Certificados Cursos\Curso Desarrollador de java intermedio\TrabajoPractico\SistemaDeReportesIncidentes\SistemaDeReportes.db"/>
+            <property name="hibernate.connection.username" value=""/>
+            <property name="hibernate.connection.password" value=""/>
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+            
+            
+        </properties>
+    </persistence-unit>
+</persistence>

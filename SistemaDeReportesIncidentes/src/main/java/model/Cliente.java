@@ -1,74 +1,58 @@
 
 package model;
 import java.util.ArrayList;
+import javax.persistence.*;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 
-public class Cliente extends Usuario{
+@Getter
+@Setter
+@Entity            
+@NoArgsConstructor 
 
+@Table(name="CLIENTE")
+public class Cliente {
 
+	 @Id
+	 @GeneratedValue(strategy = GenerationType.IDENTITY)   
+	 @Column(name="id")
+	 private Long id;
+	 
+	 @Column(name="nombre")
+	 private String nombre;
+	 
+	 @Column(name="razonSocial")
 	 private String razonSocial;
-
+	 
+	 @Column(name="Cuit")
 	 private String CUIT;
+	 
+	 
+	 @OneToMany(mappedBy = "cliente")
 	 private ArrayList<Servicio> servicioscontratados;
+	
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 @Override
+	public String toString() {
+		return "Cliente [id=" + id + ", nombre=" + nombre + ", razonSocial=" + razonSocial + ", CUIT=" + CUIT
+				+ ", servicioscontratados=" + servicioscontratados + "]";
+	}
 	 
 
-	 public Cliente(String nombre, String razonSocial, String cUIT) {
-		super(nombre);
-		this.razonSocial = razonSocial;
-		CUIT = cUIT;
-		servicioscontratados = new ArrayList<Servicio>();
-	}
-
-
-
-	public String getRazonSocial() {
-		return razonSocial;
-	}
 
 
 
 
 
-	public String getCUIT() {
-		return CUIT;
-	}
-
-
-
-	public ArrayList<Servicio> getServicioscontratados() {
-		return servicioscontratados;
-	}
-
-
-
-	public void setRazonSocial(String razonSocial) {
-		this.razonSocial = razonSocial;
-	}
-
-
-
-
-	public void setCUIT(String cUIT) {
-		CUIT = cUIT;
-	}
-
-
-
-	public void setServicioscontratados(ArrayList<Servicio> servicioscontratados) {
-		this.servicioscontratados = servicioscontratados;
-	}
-
-
-
-
-
-
-	@Override
-	public String toString() {
-		return super.toString()+" \t" + razonSocial + "\t " + CUIT + "\t  "+ servicioscontratados ;
-	}
-	
-	
 	
 
 	 
