@@ -1,0 +1,3 @@
+org\argentinaprograma\validadorDeCorrelativas\excepciones\NoExisteMateriaExcepcion.class
+org\argentinaprograma\validadorDeCorrelativas\models\Materia.class
+org\argentinaprograma\validadorDeCorrelativas\models\Alumno.class
